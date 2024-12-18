@@ -8,6 +8,10 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 class WeatherClient {
+    fun getWeather(d: Double, d1: Double) {
+
+
+    }
 
     private val client = HttpClient {
         install(ContentNegotiation) {
@@ -22,6 +26,7 @@ class WeatherClient {
         }
     }
 }
+
 
 
 

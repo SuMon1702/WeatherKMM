@@ -13,9 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -42,10 +39,11 @@ fun App() {
 
     LaunchedEffect(Unit){
         corountineScope.launch {
-             = weatherApiClient.getWeather(16.8428503,96.2095844)
+              weatherApiClient.getWeather(16.8428503,96.2095844)
         }
     }
 
+    val weatherData = null
     weatherData?.let {
         Box(
             modifier = Modifier.fillMaxSize()
